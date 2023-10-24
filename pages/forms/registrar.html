@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/styles.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+
+
+      <div class="container-fluid">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+           <center>
+                <div class="col-lg-7" >
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 style="font-size:x-large;" class="h4 text-gray-900 mb-4">Hola administador, crea una cuenta</h1>
+                        </div>
+                        <form class="user" action="CodigoRe.php" method="POST">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control" name="id" required  
+                                        placeholder="Identificación">
+                                </div>
+
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <select class="form-control" name="tipoid">
+                                        <option selected>Tipo de Identificacion</option>
+                                        <option value="CC">Cedula de ciudadanía</option>
+                                        <option value="TI">Tarjeta de identidad</option>
+                                        <option value="CE">Cedula de Extranjeria</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control" name="n1" required  
+                                    placeholder="Pimer nombre">
+                            </div>
+
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control" name="n2"   
+                                    placeholder="Segundo nombre">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control" name="p1" required  
+                                    placeholder="Primer apellido">
+                            </div>
+
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control" name="p2" required  
+                                    placeholder="Segundo apellido">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email"
+                                    placeholder="Dirrección de correo electrónico">
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control" name="tlf" required  
+                                        placeholder="Teléfono">
+                                </div>
+
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                  
+          <input class="form-control" id="date" name="date" placeholder="Fecha de nacimiento" type="date"/>
+                                                                               
+                                </input>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+        
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <select class="form-control" name="rol">
+                                        <option selected>Rol</option>
+                                        <option value="1">Estudiante</option>
+                                        <option value="2">Acudiente</option>
+                                        <option value="3">Administrador</option>
+                                        <option value="4">Docente</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control" name="edad" required  
+                                        placeholder="Edad">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+        
+                              <div class="col-sm-6 mb-3 mb-sm-0">
+                                  <select class="form-control" name="grupo">
+                                      <option selected>Grupo</option>
+                                      <option value="0101">01-01</option>
+                                      <option value="0102">01-02</option>
+                                      <option value="0201">02-01</option>
+                                      <option value="0202">02-02</option>
+                                      <option value="0301">03-01</option>
+                                      <option value="0302">03-02</option>
+                                      <option value="0401">04-01</option>
+                                      <option value="0402">04-02</option>
+                                      <option value="0501">05-01</option>
+                                      <option value="0502">05-02</option>
+                                      <option value="0601">06-01</option>
+                                      <option value="0602">06-02</option>
+                                      <option value="0701">07-01</option>
+                                      <option value="0702">07-02</option>
+                                      <option value="0801">08-01</option>
+                                      <option value="0802">08-02</option>
+                                      <option value="0901">09-01</option>
+                                      <option value="0902">09-02</option>
+                                      <option value="1001">10-01</option>
+                                      <option value="1002">10-02</option>
+                                      <option value="1101">11-01</option>
+                                      <option value="1">Docente</option>
+                                  </select>
+                              </div>
+
+                              <div class="col-sm-6 mb-3 mb-sm-0">
+                                  <input type="password" class="form-control" name="clave" required  
+                                      placeholder="Contraseña">
+                              </div>
+                          </div>
+
+                            <hr>
+                            
+
+                            <button style="background-color:#091d36; color: white;" type="submit" class="btn btn- btn-user btn-block" name="registrar"><i class="fas fa-sign-in-alt"></i>  Registrar</button>
+                        </form>
+                       
+                                                        
+
+    </div>
+  </center>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+                      
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <center>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Studcents Copyright © 2023.  <a href="#" target="_blank"></a>Todos los derechos reservados.</span>
+            
+          </div>
+          </center>
+         
+</footer> 
+       <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="../../vendors/select2/select2.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/file-upload.js"></script>
+  <script src="../../js/typeahead.js"></script>
+  <script src="../../js/select2.js"></script>
+  <!-- End custom js for this page-->
+
+
+
+            </body>
+
+            </html>
