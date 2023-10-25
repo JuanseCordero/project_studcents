@@ -344,6 +344,14 @@ if(!isset($_SESSION['doc'])){
           <?php
         }}
         ?>
+
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.php?mod=Usuarios">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Usuarios</span>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="dashboard.php?mod=dropdowns">
               <i class="icon-contract menu-icon"></i>
@@ -425,6 +433,10 @@ if(!isset($_SESSION['doc'])){
                       if(@ $_GET['mod']=="dropdowns"){
                           
                       require_once("./pages/ui-features/dropdowns.php");
+                    }else
+                      if(@ $_GET['mod']=="Usuarios"){
+                          
+                      require_once("./pages/ui-features/usuarios.php");
                     }else
                       if(@ $_GET['mod']=="registrar"){
                           

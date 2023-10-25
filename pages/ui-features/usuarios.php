@@ -41,14 +41,20 @@
                     <table class="table">
                       <thead>
                         <tr>
-                          <th>Nombres</th>
-                          <th>Apellidos</th>
-                          <th>Materia</th>
-                          <th>Fecha</th>
-                          <th>Estado</th>
+                          <th>Documento</th>
+                          <th>Tipo de documento</th>
+                          <th>Primer nombre</th>
+                          <th>Segundo nombre</th>
+                          <th>Primer apellido</th>
+                          <th>Segundo Apellido</th>
+                          <th>Email</th>
+                          <th>Teléfono</th>
+                          <th>Rol</th>
+                          <th>Fecha de nacimiento</th>
+                          <th>Edad</th>
+                          <th>Grupo</th>
                           <th>U</th>
                           <th>D</th>
-                          
                         </tr>
                       </thead>
                       <tbody>
@@ -56,35 +62,36 @@
                         <?php
                           require ("connection.php");
 
-                            $sql = $conn -> query("SELECT id_asistencia, user.nom1, user.ape1, fecha, estado, materia.nombre_materia AS nombre_materia
-                            FROM asistencia
-                            INNER JOIN user ON asistencia.id_estudiante = user.doc
-                            INNER JOIN materia ON asistencia.fk_materia = materia.id_materia; 
+                            $sql = $conn -> query("SELECT doc, tipo_doc, nom1, nom2, ape1, ape2, correo, tel, rol.nom_rol,nac,edad,grupo.nom_num
+                            FROM user
+                            INNER JOIN rol ON user.id_rol_fk = rol.id_rol
+                            INNER JOIN grupo ON user.fk_grupo = grupo.id_grupo; 
                             ");
                           
                           
                             while ($resultado = $sql->fetch_assoc()) {
                                 echo "<tr>";
                                
+                                echo "<td>" . $resultado["doc"] . "</td>";
+                                echo "<td>" . $resultado["tipo_doc"] . "</td>";
                                 echo "<td>" . $resultado["nom1"] . "</td>";
+                                echo "<td>" . $resultado["nom2"] . "</td>";
                                 echo "<td>" . $resultado["ape1"] . "</td>";
-                                echo "<td>" . $resultado["nombre_materia"] . "</td>";
-                                echo "<td>" . $resultado["fecha"] . "</td>";
-                                if ($resultado["estado"] === "si") {
-                                  echo '<td><label class="badge badge-success">Asistió</label></td>';
-                              } elseif ($resultado["estado"] === "ex") {
-                                  echo '<td><label class="badge badge-warning">Excusa</label></td>';
-                              } else {
-                                  echo '<td><label class="badge badge-danger">No asistió</label></td>';
-                              }
+                                echo "<td>" . $resultado["ape2"] . "</td>";
+                                echo "<td>" . $resultado["correo"] . "</td>";
+                                echo "<td>" . $resultado["tel"] . "</td>";
+                                echo "<td>" . $resultado["nom_rol"] . "</td>";
+                                echo "<td>" . $resultado["nac"] . "</td>";
+                                echo "<td>" . $resultado["edad"] . "</td>";
+                                echo "<td>" . $resultado["nom_num"] . "</td>";
                               
 
-                              echo "<td style='color: blue'><a href='modificar.php?id=" . $resultado["id_asistencia"] . "' style='color: blue;'>Modificar</a></td>";
+                              echo "<td style='color: blue'><a href='modificar2.php?id=" . $resultado["doc"] . "' style='color: blue;'>Modificar</a></td>";
 
 
     
                                 // Eliminar
-                                echo "<td style='color: red'><a href='eliminar.php?id=" . $resultado["id_asistencia"] . "' style='color: red;'>Eliminar</a></td>";
+                                echo "<td style='color: red'><a href='eliminar2.php?id=" . $resultado["doc"] . "' style='color: red;'>Eliminar</a></td>";
 
                                 
                                 echo "</tr>";
