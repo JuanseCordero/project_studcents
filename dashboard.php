@@ -332,7 +332,8 @@ if(!isset($_SESSION['doc'])){
             </a>
           </li>
           <?php
-          if($_SESSION['rol']=="2" or $_SESSION['rol']=="3"){
+          
+        }if($_SESSION['rol']=="2" or $_SESSION['rol']=="3"){
           ?>
 
           <li class="nav-item">
@@ -342,7 +343,7 @@ if(!isset($_SESSION['doc'])){
             </a>
           </li>
           <?php
-        }}
+        }
         ?>
 
           <li class="nav-item">
