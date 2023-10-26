@@ -52,8 +52,11 @@
                           <th>Rol</th>
                           <th>Fecha de nacimiento</th>
                           <th>Edad</th>
+                          <?php
+                          if($_SESSION['rol']=="3"){ ?>
                           <th>U</th>
                           <th>D</th>
+                          <?php }?>
                         </tr>
                       </thead>
                       <tbody>
@@ -82,7 +85,7 @@
                                 echo "<td>" . $resultado["nac"] . "</td>";
                                 echo "<td>" . $resultado["edad"] . "</td>";
                               
-
+                                if($_SESSION['rol']=="3"){ 
                               echo "<td style='color: blue'><a href='modificar3.php?id=" . $resultado["doc"] . "' style='color: blue;'>Modificar</a></td>";
 
 
@@ -93,7 +96,7 @@
                                 
                                 echo "</tr>";
                                 
-                                
+                                }
                             }
                             ?>
                         <?php

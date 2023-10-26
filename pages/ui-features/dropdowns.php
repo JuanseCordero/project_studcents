@@ -46,8 +46,11 @@
                           <th>Materia</th>
                           <th>Fecha</th>
                           <th>Estado</th>
+                          <?php
+                          if($_SESSION['rol']=="3" or $_SESSION['rol']=="2"){ ?>
                           <th>U</th>
                           <th>D</th>
+                          <?php } ?>
                           
                         </tr>
                       </thead>
@@ -78,6 +81,7 @@
                                   echo '<td><label class="badge badge-danger">No asistió</label></td>';
                               }
                               
+                              if($_SESSION['rol']=="3" or $_SESSION['rol']=="2"){ 
 
                               echo "<td style='color: blue'><a href='modificar.php?id=" . $resultado["id_asistencia"] . "' style='color: blue;'>Modificar</a></td>";
 
@@ -88,7 +92,7 @@
 
                                 
                                 echo "</tr>";
-                                
+                              }
                                 
                             }
                             ?>

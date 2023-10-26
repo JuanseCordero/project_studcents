@@ -361,30 +361,12 @@ if(!isset($_SESSION['doc'])){
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="dashboard.php?mod=grupos">
-              <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Grupos</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
             <a class="nav-link" href="dashboard.php?mod=docentes">
               <i class="icon-head menu-icon"></i>
               <span class="menu-title">Docentes</span>
             </a>
           </li>
 
-
-         
-
-          
-
-          <li class="nav-item">
-            <a class="nav-link" href="dashboard.php?mod=satisfaccion">
-              <i class="icon-bar-graph menu-icon"></i>
-              <span class="menu-title">Sistema PQRS</span>
-            </a>
-          </li>
 
           
   
